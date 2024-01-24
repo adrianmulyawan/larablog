@@ -1,0 +1,774 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+/* Navbar Style */
+/* nav {
+  position: sticky;
+  top: 0;
+} */
+
+.find-me-text {
+  border-radius: 10px;
+  background-color: #000080;
+}
+
+li a.nav-link {
+  color: #000080;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+li a.nav-link:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+li a span.span-text-nav {
+  color: #fff;
+  font-weight: 500;
+}
+/* =============== */
+
+/* Header Style */
+header.header-blog {
+  background-image: url('../images/header-image-master.png');
+  margin-top: -60px !important;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%; 
+  box-sizing: border-box;
+  overflow: hidden; /* Menambahkan overflow: hidden agar tidak muncul scroll horizontal */
+}
+
+.header-content {
+  width: 100%; /* Menambahkan lebar 100% pada header-content */
+  max-width: 1200px; /* Menambahkan batas lebar maksimal */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1.text-title {
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  margin: 0; /* Menghapus margin agar tidak ada ruang di sisi header */
+}
+
+p.text-motto {
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 24px;
+  letter-spacing: 5px;
+}
+
+p.text-motto-2 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  line-height: 30px;
+}
+
+.btn-learn-more {
+  background-color: #FF9902;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+.btn-learn-more:hover {
+  background-color: #eda02d;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+/* =============== */
+
+/* Section focus Style */
+section.section-focus {
+  margin-top: 80px;
+}
+
+div.row-focus-header h1 {
+  text-decoration: none;
+  font-size: 36px;
+  color: #000080;
+  font-weight: 800;
+  line-height: 1.2 !important;
+  letter-spacing: 3px;
+  margin-top: 24px; 
+  margin-bottom: 24px;
+}
+
+.card-focus {
+  height: 100%;
+  width: 100%;
+  border: 2px solid #000080;
+  border-radius: 10px;
+  color: #000080;
+}
+
+.card-focus h3 {
+  font-size: 24px;
+  letter-spacing: 3px;
+  line-height: 1.2 !important;
+}
+
+p.desc-focus {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* =============== */
+
+/* Style Section About and action */
+section.section-about-and-action {
+  margin-top: 100px;
+}
+
+.row-about h5.about-lsm {
+  font-size: 13px;
+  font-weight: 500;
+  color: #000080;
+  text-transform: uppercase;
+  letter-spacing: 0.65px;
+}
+
+.row-about h2.for-lsm {
+  color: #000080;
+  font-size: 39px;
+  font-weight: 400;
+  line-height: 1.2em;
+}
+
+.row-about p.lsm-description {
+  color: #000080;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 1.8em;
+  word-wrap: break-word;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.row-about a.btn-lsm-description {
+  background-color: #FF9902;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.row-about a.btn-lsm-description:hover {
+  background-color: #eda02d;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.card-action-container {
+  border: 2px solid #000080;
+  background-color: orange;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card-action-container h3  {
+  font-size: 24px;
+  line-height: 1.2;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  color: white;
+}
+
+.card-action-container p {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 1.2;
+}
+
+/* =============== */
+
+/* Style Section News */
+section.section-news {
+  margin-top: 80px;
+}
+
+div.news-heading {
+  margin-bottom: 24px;
+}
+
+div.news-heading h1 {
+  text-decoration: none;
+  font-size: 36px;
+  color: #000080;
+  font-weight: 800;
+  line-height: 1.2 !important;
+  letter-spacing: 3px;
+  margin-top: 24px; 
+  margin-bottom: 12px;
+}
+
+div.news-heading p {
+  color: #000080;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.card-news {
+  border: none;
+  transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  overflow: hidden;
+  border-radius: 20px;
+  min-height: 400px;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 768px) {
+    min-height: 350px;
+  }
+
+  @media (max-width: 420px) {
+    min-height: 300px;
+  }
+
+  &.card-has-bg {
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: inherit;
+      -webkit-filter: grayscale(1);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+
+    &:hover {
+      transform: scale(0.98);
+      box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.3);
+      background-size: 130%;
+      transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+
+      .card-img-overlay {
+        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+        background: rgb(255, 186, 33);
+        background: linear-gradient(
+          0deg,
+          rgba(255, 186, 33, 0.5) 0%,
+          rgba(255, 186, 33, 1) 100%
+        );
+      }
+    }
+  }
+  .card-footer {
+    background: none;
+    border-top: none;
+    .media {
+      img {
+        border: solid 3px rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+  .card-title {
+    font-weight: 800;
+  }
+  .card-meta {
+    color: rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  .card-body {
+    transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  &:hover {
+    .card-body {
+      margin-top: 30px;
+      transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    cursor: pointer;
+    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .card-img-overlay {
+    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+    background: rgb(255, 186, 33);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 186, 33, 0.3785889355742297) 0%,
+      rgba(255, 186, 33, 1) 100%
+    );
+  }
+}
+
+a.btn-load-more {
+  background-color: #FF9902;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+a.btn-load-more:hover {
+  background-color: #eda02d;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+
+/* =============== */
+
+/* Style Section Publication */
+section.section-publication {
+  margin-top: 100px;
+}
+
+/* =============== */
+
+/* Kata Mereka */
+section.section-said {
+  margin-top: 100px;
+}
+
+div.said-heading h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #000080;
+  letter-spacing: 5px;
+}
+
+div.said-heading p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #000080;
+}
+
+.profile-card-5{
+  margin-top:20px;
+  border: 1px solid #FF9902;
+}
+.profile-card-5 .btn{
+  border-radius:2px;
+  text-transform:uppercase;
+  font-size:12px;
+  padding:7px 20px;
+}
+.profile-card-5 .card-img-block {
+  width: 91%;
+  margin: 0 auto;
+  position: relative;
+  top: -20px;
+  
+}
+.profile-card-5 .card-img-block img{
+  border-radius:5px;
+  box-shadow:0 0 10px rgba(0,0,0,0.63);
+}
+.profile-card-5 h5{
+  color: #000080;
+  font-weight:600;
+}
+.profile-card-5 p{
+  font-size:14px;
+  font-weight:300;
+  color: #000080;
+}
+.profile-card-5 .btn-primary{
+  background-color:#4E5E30;
+  border-color:#4E5E30;
+}
+
+/* ==================== */
+
+/* Style for upcoming event */
+section.section-upcoming-event {
+  margin-top: 100px;
+}
+
+.section-upcoming-event h1.upcoming-event-header {
+  text-decoration: none;
+  font-size: 30px;
+  color: #000080;
+  font-weight: 600;
+  line-height: 1.2 !important;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+/* ==================== */
+
+/* Style news page */
+div.header-news {
+  background-color: #FF9902;
+  margin-top: 0px;
+}
+
+.header-news h1 {
+  font-size: 35px;
+  letter-spacing: 5px;
+  font-weight: 600;
+}
+
+.header-news p {
+  font-size: 18px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+
+/* ==================== */
+
+/* Style detail news */
+.container-detail-news {
+  margin-top: 80px;
+}
+
+h2.news-title {
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 1.5em;
+  color: #000080;
+}
+
+p.news-author {
+  font-size: 16px;
+  font-weight: 300;
+  color: #666;
+}
+span.text-admin {
+  color: #FF9902;
+}
+
+p.news-posting {
+  font-size: 12px;
+  color: #666;
+  font-weight: 300;
+}
+
+.news-image-header img {
+  max-width: 100%;
+  height: auto;
+}
+
+.news-content p {
+  color: #000;
+  font-size: 16px;
+  line-height: 1.4em;
+}
+
+.news-content h1 {
+  font-size: 30px;
+  color: #000;
+  line-height: 1.8em;
+}
+
+div.related-post h5 {
+  color: #000080;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.news-source p {
+  color: #000;
+  font-size: 16px;
+}
+
+a.news-source {
+  text-decoration: none;
+  color: #000080;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* ==================== */
+
+/* Style detail publication */
+.container-detail-publication {
+  margin-top: 80px;
+}
+
+.container-project {
+  margin-top: 80px;
+}
+
+.project-header{
+  margin-bottom: 24px;
+}
+
+.project-header h1 {
+  font-size: 35px;
+  letter-spacing: 5px;
+  font-weight: 600;
+  color: #000080;
+}
+
+.project-header p {
+  font-size: 18px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  color: #000080;
+}
+
+/* ==================== */
+
+/* Style detail projek */
+.card-left, .card-right {
+  border: 1px solid #000080;
+}
+
+h2.text-title-project {
+  color: #000080;
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+p.text-title-author {
+  color: #000080;
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+div.project-description h5, div.project-loction h5, div.project-contact-person h5, h5.text-detail-project {
+  color: #000080;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+
+div.project-description p {
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 1.8em;
+}
+
+div.project-loction p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6em;
+  color: #666;
+}
+
+div.project-contact-person p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6em;
+  color: #666;
+}
+
+div.detail-information th {
+  color: #000080;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+div.detail-information td {
+  color: #000080;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.btn-regis {
+  background-color: #FF9902;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+.btn-regis:hover {
+  background-color: #eda02d;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+div.regis-form-header h3 {
+  font-size: 30px;
+  color: #000080;
+  font-weight: 600;
+}
+
+div.regis-form-header p {
+  font-size: 14px;
+  color: #000080;
+  font-weight: 200;
+}
+
+.card-form-register {
+  border: 1px solid #000080;
+  border-radius: 15px;
+}
+
+div.message h1 {
+  color: #000080;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+div.message p {
+  color: #666;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+/* ==================== */
+
+/* Gaya untuk Layar HP */
+@media (max-width: 767px) {
+  h1.text-title {
+    font-size: 16px;
+    letter-spacing: 5px;
+  }
+
+  p.text-motto {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 16px;
+    letter-spacing: 3px;
+  }
+
+  p.text-motto-2 {
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 24px;
+  }
+
+  .btn-learn-more {
+    font-size: 14px;
+    border-radius: 15px;
+  }
+
+  section.section-focus {
+    margin-top: 60px;
+  }
+
+  .col-focus {
+    margin-bottom: 20px; /* Memberikan ruang antara kolom pada perangkat seluler */
+  }
+
+  .row-focus {
+    display: flex;
+    align-items: center;
+  }
+
+  .card-focus {
+    width: 100%;
+    height: 100%;
+  }
+
+  div.row-focus-header h1 {
+    font-size: 28px;
+  }
+
+  section.section-about-and-action {
+    margin-top: 60px;
+  }
+
+  div.col-about {
+    margin-bottom: 24px;
+  }
+  
+  .row-about h5.about-lsm {
+    text-align: center;
+  }
+
+  .row-about h2.for-lsm {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .card-action-container {
+    height: 100%;
+    width: 100%;
+  }
+
+  section.section-news {
+    margin-top: 60px;
+  }
+
+  div.news-heading h1 {
+    font-size: 28px;
+  }
+
+  section.section-said {
+    margin-top: 60px;
+  }
+
+  div.said-heading h1 {
+    text-align: center;
+  }
+  
+  div.said-heading p {
+    text-align: center;
+  }
+
+  section.section-upcoming-event {
+    margin-top: 60px;
+  }
+
+  .section-upcoming-event h1.upcoming-event-header {
+    text-align: center;
+  }
+
+  .header-news h1 {
+    font-size: 24px;
+    letter-spacing: 5px;
+    font-weight: 600;
+  }
+  
+  .header-news p {
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  .container-detail-news {
+    margin-top: 40px;
+  }
+  
+  h2.news-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  p.news-author {
+    font-size: 14px;
+  }
+
+  .container-detail-publication {
+    margin-top: 40px;
+  }
+
+  .container-project {
+    margin-top: 40px;
+  }
+
+  .col-left {
+    margin-bottom: 20px;
+  }
+}
