@@ -23,6 +23,7 @@ class Project extends Model
         'project_registration_deadline',
         'contact_person_name',
         'contact_person_phone',
+        'is_done'
     ];
 
     public function user()
