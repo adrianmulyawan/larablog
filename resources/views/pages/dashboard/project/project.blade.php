@@ -51,11 +51,11 @@
                                             </td>
                                             <td class="text-center">{{ $item->is_done === 0 ? 'Buka' : 'Tutup' }}</td>
                                             <td class="text-center">
-                                                <a href="../super-admin/dashboardEditKawasan.html"
+                                                <a href="{{ route('project.edit', $item->id) }}"
                                                     class="btn btn-info mt-auto mr-2">
                                                     <i class="fa-solid fa-pencil" style="color: #ffffff;"></i>
                                                 </a>
-                                                <a href="{{ route('news.destory', $item->id) }}" class="btn btn-danger"
+                                                <a href="{{ route('project.destroy', $item->id) }}" class="btn btn-danger"
                                                     data-confirm-delete="true">
                                                     <i class="fa fa-trash"></i>
                                                 </a>
