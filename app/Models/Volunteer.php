@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Volunteer extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'project_id',
+        'name',
+        'email',
+        'phone_number'
+    ];
+
+    public function project()
+    {
+        return $this->belongsTo(Project::class);
+    }
 }
