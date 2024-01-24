@@ -102,6 +102,10 @@ Route::delete('/dashboard/publication/category/delete/{id}', [PublicationCategor
 
 Route::get('/dashboard/project', [DashboardProjectController::class, 'index'])->name('project.index');
 Route::get('/dashboard/project/add', [DashboardProjectController::class, 'create'])->name('project.create');
+Route::post('/dashboard/project/store', [DashboardProjectController::class, 'store'])->name('project.store');
+Route::get('/dashboard/project/edit/{id}', [DashboardProjectController::class, 'edit'])->name('project.edit');
+Route::put('/dashboard/project/update/{id}', [DashboardProjectController::class, 'update'])->name('project.update');
+Route::delete('/dashboard/project/delete/{id}', [DashboardProjectController::class, 'destroy'])->name('project.destroy');
 
 Route::get('/dashboard/volunteer', [VolunteerController::class, 'index'])->name('volunteer.index');
 Route::get('/dashboard/volunteer/detail/data1', [VolunteerController::class, 'show'])->name('volunteer.show');
