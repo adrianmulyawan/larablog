@@ -108,7 +108,7 @@ Route::put('/dashboard/project/update/{id}', [DashboardProjectController::class,
 Route::delete('/dashboard/project/delete/{id}', [DashboardProjectController::class, 'destroy'])->name('project.destroy');
 
 Route::get('/dashboard/volunteer', [VolunteerController::class, 'index'])->name('volunteer.index');
-Route::get('/dashboard/volunteer/detail/data1', [VolunteerController::class, 'show'])->name('volunteer.show');
+Route::get('/dashboard/volunteer/detail/{id}', [VolunteerController::class, 'show'])->name('volunteer.show');
 
 Route::get('/dashboard/settings/setting-account', [SettingController::class, 'index'])->name('setting.index');
 Route::get('/dashboard/settings/change-password', [PasswordController::class, 'index'])->name('password.index');
