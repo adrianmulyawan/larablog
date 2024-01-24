@@ -16,7 +16,7 @@
                     <div class="card card-table">
                         <div class="card-header">
                             <div class="d-flex justify-content-between align-items-center py-2">
-                                <h5 class="text-start my-2 mx-2">Daftar Volunteer Projek Bersihkan Sungai Itik</h5>
+                                <h5 class="text-start my-2 mx-2">Daftar Volunteer Projek : {{ $project->project_name }}</h5>
                             </div>
                         </div>
                         <div class="card-body">
@@ -29,133 +29,36 @@
                                         <th scope="col" class="text-center table-heading">No Handphone / Whatsapp</th>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="text-center">1</td>
-                                        <td class="text-center">
-                                            Muhammad Sumbul
-                                        </td>
-                                        <td class="text-center">
-                                            mhmdsumbul@mail.com
-                                        </td>
-                                        <td class="text-center">
-                                            08964001855
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">2</td>
-                                        <td class="text-center">
-                                            Adrian Mulyawan
-                                        </td>
-                                        <td class="text-center">
-                                            adrianmlywn@mail.com
-                                        </td>
-                                        <td class="text-center">
-                                            08964001855
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">3</td>
-                                        <td class="text-center">
-                                            Muhammad Khairi
-                                        </td>
-                                        <td class="text-center">
-                                            mkhairi@mail.com
-                                        </td>
-                                        <td class="text-center">
-                                            08964001855
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">4</td>
-                                        <td class="text-center">
-                                            Muhammad Khairi
-                                        </td>
-                                        <td class="text-center">
-                                            mkhairi@mail.com
-                                        </td>
-                                        <td class="text-center">
-                                            08964001855
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">5</td>
-                                        <td class="text-center">
-                                            Muhammad Khairi
-                                        </td>
-                                        <td class="text-center">
-                                            mkhairi@mail.com
-                                        </td>
-                                        <td class="text-center">
-                                            08964001855
-                                        </td>
-                                    </tr>
-                                </tbody>
-                                <tr>
-                                    <td class="text-center">56</td>
-                                    <td class="text-center">
-                                        Muhammad Khairi
-                                    </td>
-                                    <td class="text-center">
-                                        mkhairi@mail.com
-                                    </td>
-                                    <td class="text-center">
-                                        08964001855
-                                    </td>
-                                </tr>
-                                </tbody>
-                                <tr>
-                                    <td class="text-center">7</td>
-                                    <td class="text-center">
-                                        Muhammad Khairi
-                                    </td>
-                                    <td class="text-center">
-                                        mkhairi@mail.com
-                                    </td>
-                                    <td class="text-center">
-                                        08964001855
-                                    </td>
-                                </tr>
-                                </tbody>
-                                <tr>
-                                    <td class="text-center">8</td>
-                                    <td class="text-center">
-                                        Muhammad Khairi
-                                    </td>
-                                    <td class="text-center">
-                                        mkhairi@mail.com
-                                    </td>
-                                    <td class="text-center">
-                                        08964001855
-                                    </td>
-                                </tr>
-                                </tbody>
-                                <tr>
-                                    <td class="text-center">9</td>
-                                    <td class="text-center">
-                                        Muhammad Khairi
-                                    </td>
-                                    <td class="text-center">
-                                        mkhairi@mail.com
-                                    </td>
-                                    <td class="text-center">
-                                        08964001855
-                                    </td>
-                                </tr>
-                                </tbody>
-                                <tr>
-                                    <td class="text-center">10</td>
-                                    <td class="text-center">
-                                        Muhammad Khairi
-                                    </td>
-                                    <td class="text-center">
-                                        mkhairi@mail.com
-                                    </td>
-                                    <td class="text-center">
-                                        08964001855
-                                    </td>
-                                </tr>
+                                    @php
+                                        $number = 0;
+                                    @endphp
+                                    @forelse ($volunteers as $volunteer)
+                                        <tr>
+                                            <td class="text-center">{{ $number += 1 }}</td>
+                                            <td class="text-center">
+                                                {{ $volunteer->name }}
+                                            </td>
+                                            <td class="text-center">
+                                                {{ $volunteer->email }}
+                                            </td>
+                                            <td class="text-center">
+                                                {{ $volunteer->phone_number }}
+                                            </td>
+                                        </tr>
+                                    @empty
+                                        <tr>
+                                            <td colspan="4">
+                                                <p class="text-danger text-center my-3">Project Ini Belum Memiliki
+                                                    Volunteer!
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    @endforelse
                                 </tbody>
                             </table>
+                            <div class="row justify-content-end float-end">
+                                {{ $volunteers->links() }}
+                            </div>
                         </div>
                     </div>
                 </div>

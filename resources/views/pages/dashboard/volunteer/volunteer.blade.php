@@ -17,9 +17,6 @@
                         <div class="card-header">
                             <div class="d-flex justify-content-between align-items-center py-2">
                                 <h5 class="text-start my-2 mx-2">Daftar Seluruh Projek</h5>
-                                <a href="add-project.html" class="btn btn-add text-end mx-2 px-3">
-                                    <i class="fa-solid fa-plus fa-sm"></i> Tambah Data
-                                </a>
                             </div>
                         </div>
                         <div class="card-body">
@@ -35,26 +32,36 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="text-center">1</td>
-                                        <td class="text-center">
-                                            Bersih Tepi Sungai Itik
-                                        </td>
-                                        <td class="text-center">Sungai Itik, Kubu Raya</td>
-                                        <td class="text-center">21 Januari 2024</td>
-                                        <td class="text-center">Buka</td>
-                                        <td class="text-center">
-                                            <a href="../super-admin/dashboardEditKawasan.html"
-                                                class="btn btn-info mt-auto mr-2">
-                                                <i class="fa-solid fa-pencil" style="color: #ffffff;"></i>
-                                            </a>
-                                            <form action="#" method="post" class="d-inline">
-                                                <button class="btn btn-danger">
-                                                    <i class="fa fa-trash"></i>
-                                                </button>
-                                            </form>
-                                        </td>
-                                    </tr>
+                                    @php
+                                        $number = 0;
+                                    @endphp
+                                    @forelse ($items as $item)
+                                        <tr>
+                                            <td class="text-center">{{ $number += 1 }}</td>
+                                            <td class="text-center">
+                                                {{ Str::limit($item->project_name, 15, '...') }}
+                                            </td>
+                                            <td class="text-center">{{ Str::limit($item->project_location, 10, '...') }}
+                                            </td>
+                                            <td class="text-center">
+                                                {{ $item->formatted_project_date }}
+                                            </td>
+                                            <td class="text-center">{{ $item->is_done === 0 ? 'Buka' : 'Tutup' }}</td>
+                                            <td class="text-center">
+                                                <a href="{{ route('volunteer.show', $item->id) }}"
+                                                    class="btn btn-primary mt-auto mr-2">
+                                                    <i class="fa-solid fa-eye" style="color: #fff;"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    @empty
+                                        <tr>
+                                            <td colspan="6">
+                                                <p class="text-danger text-center my-3">Anda Belum Memiliki Berita Apapun!
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    @endforelse
                                 </tbody>
                             </table>
                         </div>
