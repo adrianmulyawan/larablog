@@ -11,6 +11,7 @@ use App\Http\Controllers\Dashboard\ProjectController as DashboardProjectControll
 use App\Http\Controllers\Dashboard\PublicationCategoryController;
 use App\Http\Controllers\Dashboard\PublicationController as DashboardPublicationController;
 use App\Http\Controllers\Dashboard\SettingController;
+use App\Http\Controllers\Dashboard\TestimonialContoller;
 use App\Http\Controllers\Dashboard\UserController;
 use App\Http\Controllers\Dashboard\VolunteerController;
 use App\Http\Controllers\HomeController;
@@ -117,6 +118,13 @@ Route::post('/dashboard/user/store', [UserController::class, 'store'])->name('us
 Route::get('/dashboard/user/edit/{id}', [UserController::class, 'edit'])->name('user.edit');
 Route::put('/dashboard/user/update/{id}', [UserController::class, 'update'])->name('user.update');
 Route::delete('/dashboard/user/delete/{id}', [UserController::class, 'destroy'])->name('user.destroy');
+
+Route::get('/dashboard/testi', [TestimonialContoller::class, 'index'])->name('testi.index');
+Route::get('/dashboard/testi/create', [TestimonialContoller::class, 'create'])->name('testi.create');
+Route::post('/dashboard/testi/store', [TestimonialContoller::class, 'store'])->name('testi.store');
+Route::get('/dashboard/testi/edit/{id}', [TestimonialContoller::class, 'edit'])->name('testi.edit');
+Route::put('/dashboard/testi/update/{id}', [TestimonialContoller::class, 'update'])->name('testi.update');
+Route::delete('/dashboard/testi/delete/{id}', [TestimonialContoller::class, 'destroy'])->name('testi.destroy');
 
 Route::get('/dashboard/settings/setting-account', [SettingController::class, 'index'])->name('setting.index');
 Route::get('/dashboard/settings/change-password', [PasswordController::class, 'index'])->name('password.index');
