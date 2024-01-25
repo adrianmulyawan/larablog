@@ -11,22 +11,24 @@
 
                 <div class="sb-sidenav-menu-heading">MENU</div>
 
-                <a class="nav-link" href="{{ route('organization.index') }}">
-                    <div class="sb-nav-link-icon"><i class="fa-solid fa-sitemap"></i></div>
-                    Organisasi
-                </a>
-                <a class="nav-link" href="{{ route('action.index') }}">
-                    <div class="sb-nav-link-icon"><i class="fa-solid fa-person-running"></i></div>
-                    Aksi
-                </a>
-                <a class="nav-link" href="{{ route('focus.index') }}">
-                    <div class="sb-nav-link-icon"><i class="fa-solid fa-brain"></i></div>
-                    Fokus
-                </a>
-                <a class="nav-link" href="{{ route('user.index') }}">
-                    <div class="sb-nav-link-icon"><i class="fa-solid fa-user-tie"></i></div>
-                    User
-                </a>
+                @if (Auth::user()->role === 'SUPER_ADMIN')
+                    <a class="nav-link" href="{{ route('organization.index') }}">
+                        <div class="sb-nav-link-icon"><i class="fa-solid fa-sitemap"></i></div>
+                        Organisasi
+                    </a>
+                    <a class="nav-link" href="{{ route('action.index') }}">
+                        <div class="sb-nav-link-icon"><i class="fa-solid fa-person-running"></i></div>
+                        Aksi
+                    </a>
+                    <a class="nav-link" href="{{ route('focus.index') }}">
+                        <div class="sb-nav-link-icon"><i class="fa-solid fa-brain"></i></div>
+                        Fokus
+                    </a>
+                    <a class="nav-link" href="{{ route('user.index') }}">
+                        <div class="sb-nav-link-icon"><i class="fa-solid fa-user-tie"></i></div>
+                        User
+                    </a>
+                @endif
                 <a class="nav-link" href="{{ route('testi.index') }}">
                     <div class="sb-nav-link-icon"><i class="fa-regular fa-comment"></i></div>
                     Testimonial
