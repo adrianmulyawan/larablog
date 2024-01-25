@@ -23,6 +23,10 @@
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-brain"></i></div>
                     Fokus
                 </a>
+                <a class="nav-link" href="{{ route('user.index') }}">
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-user-tie"></i></div>
+                    User
+                </a>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#news"
                     aria-expanded="false" aria-controls="news">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-newspaper"></i></div>
