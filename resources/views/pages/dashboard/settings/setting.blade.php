@@ -20,29 +20,31 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <form action="#" method="post">
+                            <form action="{{ route('setting.update') }}" method="post">
+                                @csrf
+                                @method('put')
                                 <div class="mb-4">
                                     <label for="name" class="form-label">Nama Lengkap</label>
                                     <input type="text" class="form-control" id="name" name="name"
-                                        value="Budiono Siregar">
+                                        value="{{ Auth::user()->name }}">
                                 </div>
                                 <div class="mb-4">
                                     <label for="username" class="form-label">Username</label>
                                     <input type="text" class="form-control" id="username" name="username"
-                                        value="budionosiregar">
+                                        value="{{ Auth::user()->username }}">
                                 </div>
                                 <div class="mb-4">
                                     <label for="email" class="form-label">Email</label>
                                     <input type="email" class="form-control" id="email" name="email"
-                                        value="budiono.siregar@mail.com">
+                                        value="{{ Auth::user()->email }}">
                                 </div>
                                 <div class="mb-4">
                                     <label for="phone_number" class="form-label">Nomor Telpon</label>
                                     <input type="text" class="form-control" id="phone_number" name="phone_number"
-                                        value="089640001855">
+                                        value="{{ Auth::user()->phone_number }}">
                                 </div>
                                 <div class="d-grid gap-2">
-                                    <button class="btn btn-primary py-2" type="button">UPDATE DATA</button>
+                                    <button class="btn btn-primary py-2" type="submit"">UPDATE DATA</button>
                                 </div>
                             </form>
                         </div>

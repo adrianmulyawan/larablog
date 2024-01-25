@@ -127,4 +127,6 @@ Route::put('/dashboard/testi/update/{id}', [TestimonialContoller::class, 'update
 Route::delete('/dashboard/testi/delete/{id}', [TestimonialContoller::class, 'destroy'])->name('testi.destroy');
 
 Route::get('/dashboard/settings/setting-account', [SettingController::class, 'index'])->name('setting.index');
+Route::put('/dashboard/settings/setting-account/update', [SettingController::class, 'update'])->name('setting.update');
+
 Route::get('/dashboard/settings/change-password', [PasswordController::class, 'index'])->name('password.index');
