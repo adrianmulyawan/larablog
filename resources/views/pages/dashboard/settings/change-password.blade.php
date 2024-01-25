@@ -19,7 +19,9 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <form action="#" method="post">
+                            <form action="{{ route('password.update') }}" method="post">
+                                @csrf
+                                @method('put')
                                 <div class="mb-4">
                                     <label for="current_password" class="form-label">Password Lama</label>
                                     <input type="password" class="form-control" id="current_password"
@@ -35,7 +37,7 @@
                                         name="password_confirmation">
                                 </div>
                                 <div class="d-grid gap-2">
-                                    <button class="btn btn-primary py-2" type="button">UPDATE PASSWORD</button>
+                                    <button class="btn btn-primary py-2" type="submit">UPDATE PASSWORD</button>
                                 </div>
                             </form>
                         </div>

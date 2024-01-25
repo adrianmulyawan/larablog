@@ -130,3 +130,4 @@ Route::get('/dashboard/settings/setting-account', [SettingController::class, 'in
 Route::put('/dashboard/settings/setting-account/update', [SettingController::class, 'update'])->name('setting.update');
 
 Route::get('/dashboard/settings/change-password', [PasswordController::class, 'index'])->name('password.index');
+Route::put('/dashboard/settings/change-password/update', [PasswordController::class, 'update'])->name('password.update');
