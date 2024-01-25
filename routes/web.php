@@ -11,6 +11,7 @@ use App\Http\Controllers\Dashboard\ProjectController as DashboardProjectControll
 use App\Http\Controllers\Dashboard\PublicationCategoryController;
 use App\Http\Controllers\Dashboard\PublicationController as DashboardPublicationController;
 use App\Http\Controllers\Dashboard\SettingController;
+use App\Http\Controllers\Dashboard\UserController;
 use App\Http\Controllers\Dashboard\VolunteerController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
@@ -109,6 +110,13 @@ Route::delete('/dashboard/project/delete/{id}', [DashboardProjectController::cla
 
 Route::get('/dashboard/volunteer', [VolunteerController::class, 'index'])->name('volunteer.index');
 Route::get('/dashboard/volunteer/detail/{id}', [VolunteerController::class, 'show'])->name('volunteer.show');
+
+Route::get('/dashboard/user', [UserController::class, 'index'])->name('user.index');
+Route::get('/dashboard/user/create', [UserController::class, 'create'])->name('user.create');
+Route::post('/dashboard/user/store', [UserController::class, 'store'])->name('user.store');
+Route::get('/dashboard/user/edit/{id}', [UserController::class, 'edit'])->name('user.edit');
+Route::put('/dashboard/user/update/{id}', [UserController::class, 'update'])->name('user.update');
+Route::delete('/dashboard/user/delete/{id}', [UserController::class, 'destroy'])->name('user.destroy');
 
 Route::get('/dashboard/settings/setting-account', [SettingController::class, 'index'])->name('setting.index');
 Route::get('/dashboard/settings/change-password', [PasswordController::class, 'index'])->name('password.index');
