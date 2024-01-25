@@ -63,7 +63,7 @@ class NewsController extends Controller
 
     public function edit($id)
     {
-        $news = News::find($id);
+        $news = News::with(['newsCategory'])->find($id);
         $newsCategories = NewsCategory::all();
 
         if (!$news) {
