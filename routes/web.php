@@ -41,10 +41,13 @@ Route::post('/masuk', [LoginController::class, 'process'])->middleware('guest')-
 Route::post('/keluar', [LoginController::class, 'logout'])->middleware('auth')->name('logout');
 
 Route::get('/', HomeController::class)->name('home');
+
 Route::get('/news', [NewsController::class, 'index'])->name('news');
-Route::get('/news/detail', [NewsController::class, 'detail'])->name('news-detail');
+Route::get('/news/detail/{slug}', [NewsController::class, 'detail'])->name('news-detail');
+
 Route::get('/publication', [PublicationController::class, 'index'])->name('publication');
-Route::get('/publication/detail', [PublicationController::class, 'detail'])->name('publication-detail');
+Route::get('/publication/detail/{slug}', [PublicationController::class, 'detail'])->name('publication-detail');
+
 Route::get('/project', [ProjectController::class, 'index'])->name('project');
 Route::get('/project/detail', [ProjectController::class, 'detail'])->name('project-detail');
 Route::get('/project/register', [ProjectController::class, 'registerProject'])->name('register-project');
