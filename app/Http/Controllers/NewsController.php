@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\News;
 use Illuminate\Http\Request;
 
 class NewsController extends Controller
@@ -9,13 +10,17 @@ class NewsController extends Controller
     /**
      * Handle the incoming request.
      */
-    public function index(Request $request)
+    public function index()
     {
-        return view('pages.news');
+        $items = News::with(['user'])->orderBy('created_at', 'DESC')->paginate(12);
+        return view('pages.news', compact('items'));
     }
 
-    public function detail(Request $request)
+    public function detail($slug)
     {
-        return view('pages.news-detail');
+        $data = News::where('news_slug', $slug)->firstOrFail();
+        $items = News::with(['user'])->orderBy('created_at', 'DESC')->limit(4)->get();
+        // dd($data);
+        return view('pages.news-detail', compact('data', 'items'));
     }
 }
