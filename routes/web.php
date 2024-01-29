@@ -49,8 +49,9 @@ Route::get('/publication', [PublicationController::class, 'index'])->name('publi
 Route::get('/publication/detail/{slug}', [PublicationController::class, 'detail'])->name('publication-detail');
 
 Route::get('/project', [ProjectController::class, 'index'])->name('project');
-Route::get('/project/detail', [ProjectController::class, 'detail'])->name('project-detail');
-Route::get('/project/register', [ProjectController::class, 'registerProject'])->name('register-project');
+Route::get('/project/detail/{slug}', [ProjectController::class, 'detail'])->name('project-detail');
+Route::get('/project/register/{slug}', [ProjectController::class, 'registerProject'])->name('register-project');
+Route::post('/project/register/store', [ProjectController::class, 'registerProjectProcess'])->name('register-project-store');
 Route::get('/success', [ProjectController::class, 'successRegister'])->name('register-project-success');
 
 // ==========================================================================================
