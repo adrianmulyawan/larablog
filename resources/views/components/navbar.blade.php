@@ -1,7 +1,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg bg-white text-dark border-bottom sticky-top">
     <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
             <img src="{{ asset('frontend/images/LOGO_KOMPAS.png') }}" alt="Logo" class="d-inline-block align-text-top"
                 style="width: 70px;">
             <span class="ms-2">LSM KOMPAS</span>
@@ -13,16 +13,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item me-4">
-                    <a class="nav-link" href="/">Halaman Utama</a>
+                    <a class="nav-link" href="{{ route('home') }}">Halaman Utama</a>
                 </li>
                 <li class="nav-item me-4">
-                    <a class="nav-link" href="publication.html">Publikasi</a>
+                    <a class="nav-link" href="{{ route('publication') }}">Publikasi</a>
                 </li>
                 <li class="nav-item me-4">
-                    <a class="nav-link" href="news.html">Berita</a>
+                    <a class="nav-link" href="{{ route('news') }}">Berita</a>
                 </li>
                 <li class="nav-item me-4">
-                    <a class="nav-link" href="project.html">Projek</a>
+                    <a class="nav-link" href="{{ route('project') }}">Projek</a>
                 </li>
                 <li class="nav-item find-me mx-2 mx-sm-0">
                     <a class="btn btn-primary find-me-text border-0 px-3" href="https://www.google.com" target="_blank">
