@@ -17,6 +17,19 @@
 
     <!-- Content -->
     <div class="container mt-2">
+        <div class="list-category-publication text-start my-4">
+            @if (count($categories) > 0)
+                <span class="badge text-bg-primary py-2 px-3 me-2 my-2">
+                    <a href="{{ route('publication') }}" class="text-white text-decoration-none">Semua Kategori</a>
+                </span>
+                @foreach ($categories as $category)
+                    <span class="badge text-bg-primary py-2 px-3 me-2 my-2">
+                        <a href="{{ route('publication-by-category', $category->publication_category_slug) }}"
+                            class="text-white text-decoration-none">{{ $category->publication_category_name }}</a>
+                    </span>
+                @endforeach
+            @endif
+        </div>
         <div class="row justify-content-start align-items-center my-5">
             @php
                 $duration = 0;
@@ -55,7 +68,7 @@
             @empty
                 <div class="col-sm-12 col-md-12 col-lg-12 mb-4">
                     <div class="card p-2">
-                        <h5 class="text-center text-danger">Belum ada berita apapun!</h5>
+                        <h5 class="text-center text-danger">Belum ada publikasi apapun!</h5>
                     </div>
                 </div>
             @endforelse
