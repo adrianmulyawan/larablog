@@ -44,6 +44,7 @@ Route::get('/', HomeController::class)->name('home');
 
 Route::get('/news', [NewsController::class, 'index'])->name('news');
 Route::get('/news/detail/{slug}', [NewsController::class, 'detail'])->name('news-detail');
+Route::get('/news/category/{slug}', [NewsController::class, 'newsByCategory'])->name('news-by-category');
 
 Route::get('/publication', [PublicationController::class, 'index'])->name('publication');
 Route::get('/publication/detail/{slug}', [PublicationController::class, 'detail'])->name('publication-detail');
