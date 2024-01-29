@@ -14,7 +14,7 @@
                         Tunggu Informasi Yang Akan Kami Sampaikan Yaa...
                     </p>
                 </div>
-                <a href="/" class="btn btn btn-regis px-5 py-2 my-3">Kehalaman Utama</a>
+                <a href="{{ route('home') }}" class="btn btn btn-regis px-5 py-2 my-3">Kehalaman Utama</a>
             </div>
         </div>
     </div>
