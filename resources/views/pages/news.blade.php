@@ -17,6 +17,19 @@
 
     <!-- Content -->
     <div class="container mt-2">
+        <div class="list-category-news text-start my-4">
+            @if (count($categories) > 0)
+                <span class="badge text-bg-primary py-2 px-3 me-2 my-2">
+                    <a href="{{ route('news') }}" class="text-white text-decoration-none">Semua Kategori</a>
+                </span>
+                @foreach ($categories as $category)
+                    <span class="badge text-bg-primary py-2 px-3 me-2 my-2">
+                        <a href="{{ route('news-by-category', $category->news_category_slug) }}"
+                            class="text-white text-decoration-none">{{ $category->news_category_name }}</a>
+                    </span>
+                @endforeach
+            @endif
+        </div>
         <div class="row justify-content-start align-items-center my-5">
             @php
                 $duration = 0;
