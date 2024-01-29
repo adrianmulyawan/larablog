@@ -48,6 +48,7 @@ Route::get('/news/category/{slug}', [NewsController::class, 'newsByCategory'])->
 
 Route::get('/publication', [PublicationController::class, 'index'])->name('publication');
 Route::get('/publication/detail/{slug}', [PublicationController::class, 'detail'])->name('publication-detail');
+Route::get('/publication/category/{slug}', [PublicationController::class, 'publicationByCategory'])->name('publication-by-category');
 
 Route::get('/project', [ProjectController::class, 'index'])->name('project');
 Route::get('/project/detail/{slug}', [ProjectController::class, 'detail'])->name('project-detail');
